@@ -1,0 +1,45 @@
+# 1. Check that FMID is an appropriate primary key: non-null and unique
+select * from farmersmarkets where FMID is NULL
+
+#2. Check Uniqueness in FMID
+select count(distinct FMID) from farmersmarkets
+
+#3 Check MarketName all populated - NULL Check
+select * from farmersmarkets where MarketName is NULL
+
+#4 latitude and longitude should be in the interval [0,90], [-180,180]
+select m.FMID, m.MarketName, m.Longitude,m.Latitude from farmersmarkets m
+ where (cast(m.Longitude as FLOAT) > 180 
+ OR cast(m.Longitude as FLOAT) < -180 
+ OR cast(m.Latitude as FLOAT) < 0 
+ OR  cast(m.Latitude as FLOAT) > 90) 
+ OR (m.Longitude is NULL 
+ OR m.Latitude is NULL OR m.Longitude = '' 
+ OR m.Latitude = '')
+
+
+#5 Active vs Non Active markets check
+Active
+select count(FMID) from farmersmarkets where Season1Date is not null
+
+Inactive
+select count(FMID) from farmersmarkets where Season1Date is null
+
+
+#6 LOCATION (ZIP) CHECK for MARKETS - Count records with non null zip vs null Zip 
+select count(FMID) from farmersmarkets where zip is not null
+select count(FMID) from farmersmarkets where zip is null
+
+#7 CITY NAME CHECK for MARKETS - - Count records with non null City vs null City
+select count(FMID) from farmersmarkets where city is not null
+select count(FMID) from farmersmarkets where city is null
+
+#8 List FarmersMarkets and location details which are open in Summer May - Aug
+
+select MarketName,street,city,State,zip,Season1Date,strftime('%m',Season1Date_Start) as start, strftime('%m',Season1Date_End) as end1 
+from farmersmarkets where (start > '04' and start < '09')
+ and (end1 > '04' and end1 < '09') 
+ 
+
+
+
