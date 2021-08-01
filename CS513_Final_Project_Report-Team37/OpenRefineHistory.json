@@ -1,0 +1,1965 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "FMID",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column FMID using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MarketName",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column MarketName using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MarketName",
+    "expression": "value.unescape('html')",
+    "onError": "keep-original",
+    "repeat": true,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column MarketName using expression value.unescape('html')"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "MarketName",
+          "expression": "grel:facetCount(value, \"value\", \"MarketName\")",
+          "columnName": "MarketName",
+          "from": 2,
+          "to": 34,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "MarketName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Grant County Farmer's Market",
+          "Grant County Farmers Market",
+          "Grant County Farmers' Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Grant County Farmer's Market"
+      },
+      {
+        "from": [
+          "Franklin Farmers Market",
+          "Franklin Farmer's Market",
+          "Franklin Farmers' Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Franklin Farmers Market"
+      },
+      {
+        "from": [
+          "Georgetown Farmers Market",
+          "Georgetown Farmers' Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Georgetown Farmers Market"
+      },
+      {
+        "from": [
+          "Jefferson Farmers Market",
+          "Jefferson Farmers' Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Jefferson Farmers Market"
+      },
+      {
+        "from": [
+          "Princeton Farmers Market",
+          "Princeton Farmers' Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Princeton Farmers Market"
+      },
+      {
+        "from": [
+          "Clayton Farmers Market",
+          "Clayton Farmers' Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Clayton Farmers Market"
+      },
+      {
+        "from": [
+          "Madison County Farmers Market",
+          "Madison County Farmers' Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Madison County Farmers Market"
+      },
+      {
+        "from": [
+          "Salem Farmers Market",
+          "Salem Farmers' Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Salem Farmers Market"
+      },
+      {
+        "from": [
+          "Lebanon Farmers Market",
+          "Lebanon Farmers' Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lebanon Farmers Market"
+      },
+      {
+        "from": [
+          "Lexington Farmers Market",
+          "Lexington Farmers' Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lexington Farmers Market"
+      },
+      {
+        "from": [
+          "Farmers' Friday Market",
+          "Friday Farmers Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Farmers' Friday Market"
+      },
+      {
+        "from": [
+          "Canton Farmers Market",
+          "Canton Farmers' Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Canton Farmers Market"
+      }
+    ],
+    "description": "Mass edit cells in column MarketName"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MarketName",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column MarketName using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MarketName",
+    "expression": "grel:value.replace(\"'\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column MarketName using expression grel:value.replace(\"'\",\"\")"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "MarketName",
+          "expression": "grel:facetCount(value, \"value\", \"MarketName\")",
+          "columnName": "MarketName",
+          "from": 2,
+          "to": 35,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "MarketName",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Rochester Downtown Farmers Market",
+          "Downtown Rochester Farmers Market"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rochester Downtown Farmers Market"
+      }
+    ],
+    "description": "Mass edit cells in column MarketName"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "MarketName",
+          "expression": "grel:facetCount(value, \"value\", \"MarketName\")",
+          "columnName": "MarketName",
+          "from": 2,
+          "to": 3,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Website",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "http://www.bluegrassfarmersmarket.org",
+          "http://www.bluegrassfarmersmarket.org/"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "http://www.bluegrassfarmersmarket.org"
+      },
+      {
+        "from": [
+          "http://www.champlainislandsfarmersmarket.com",
+          "http://www.champlainislandsfarmersmarket.com/"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "http://www.champlainislandsfarmersmarket.com"
+      },
+      {
+        "from": [
+          "http://www.azFarmersMarkets.US",
+          "http://www.azfarmersmarkets.us"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "http://www.azFarmersMarkets.US"
+      },
+      {
+        "from": [
+          "http://www.ccdowntownfm.com",
+          "http://www.ccdowntownfm.com/"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "http://www.ccdowntownfm.com"
+      }
+    ],
+    "description": "Mass edit cells in column Website"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Twitter",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "n/a",
+          "NA",
+          "N/A"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "n/a"
+      },
+      {
+        "from": [
+          "https://Twitter.com/MenoFarmMarket",
+          "https://twitter.com/MenoFarmMarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "https://Twitter.com/MenoFarmMarket"
+      },
+      {
+        "from": [
+          "@smfms",
+          "smfms"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "@smfms"
+      },
+      {
+        "from": [
+          "@PkskllFarmMkt",
+          "@pkskllfarmmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "@PkskllFarmMkt"
+      },
+      {
+        "from": [
+          "https://twitter.com/AthFarmersMkt",
+          "https://twitter.com/athfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "https://twitter.com/AthFarmersMkt"
+      },
+      {
+        "from": [
+          "https://twitter.com/CVCountryside",
+          "https://twitter.com/cvcountryside"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "https://twitter.com/CVCountryside"
+      },
+      {
+        "from": [
+          "Yes",
+          "yes"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Yes"
+      },
+      {
+        "from": [
+          "none",
+          "None"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "none"
+      },
+      {
+        "from": [
+          "https://twitter.com/SanfrdFarmrsMkt",
+          "https://twitter.com/sanfrdfarmrsmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "https://twitter.com/SanfrdFarmrsMkt"
+      },
+      {
+        "from": [
+          "https://twitter.com/FWfarmersmarket",
+          "https://twitter.com/fwfarmersmarket"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "https://twitter.com/FWfarmersmarket"
+      }
+    ],
+    "description": "Mass edit cells in column Twitter"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Youtube",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "n/a",
+          "N/A",
+          "NA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "n/a"
+      },
+      {
+        "from": [
+          "none",
+          "None"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "none"
+      }
+    ],
+    "description": "Mass edit cells in column Youtube"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "OtherMedia",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "n/a",
+          "N/A",
+          "NA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "n/a"
+      },
+      {
+        "from": [
+          "instagram: @crescentcityfarmersmkt",
+          "Instagram: @crescentcityfarmersmkt"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "instagram: @crescentcityfarmersmkt"
+      },
+      {
+        "from": [
+          "Twitter , instagram",
+          "Twitter, Instagram"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Twitter , instagram"
+      },
+      {
+        "from": [
+          "http://pinterest.com/morgantownmkt",
+          "http://pinterest.com/morgantownmkt/"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "http://pinterest.com/morgantownmkt"
+      },
+      {
+        "from": [
+          "Instagram @smfms",
+          "Instagram:  SMFMs"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Instagram @smfms"
+      },
+      {
+        "from": [
+          "Seattle_Farmers_Markets   Instagram",
+          "Seattle_Farmers_Markets  Instagram"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Seattle_Farmers_Markets   Instagram"
+      },
+      {
+        "from": [
+          "Instagram",
+          "instagram"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Instagram"
+      },
+      {
+        "from": [
+          "none",
+          "None"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "none"
+      },
+      {
+        "from": [
+          "Facebook",
+          "facebook"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Facebook"
+      }
+    ],
+    "description": "Mass edit cells in column OtherMedia"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "street",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column street using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column city using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "city",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column city using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "city",
+          "expression": "grel:facetCount(value, \"value\", \"city\")",
+          "columnName": "city",
+          "from": 1,
+          "to": 2,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "city",
+    "expression": "value.trim()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column city using expression value.trim()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "city",
+          "expression": "grel:facetCount(value, \"value\", \"city\")",
+          "columnName": "city",
+          "from": 1,
+          "to": 2,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "County",
+    "expression": "value.toTitlecase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column County using expression value.toTitlecase()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "County",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "District of Columbia",
+          "District Of Columbia"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "District of Columbia"
+      },
+      {
+        "from": [
+          "Santa Barbara",
+          "SANTA BARBARA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Santa Barbara"
+      },
+      {
+        "from": [
+          "Washington",
+          "WASHINGTON"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Washington"
+      },
+      {
+        "from": [
+          "Mobile",
+          "MOBILE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mobile"
+      },
+      {
+        "from": [
+          "DeKalb",
+          "Dekalb"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "DeKalb"
+      },
+      {
+        "from": [
+          "Bristol",
+          "BRISTOL"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bristol"
+      },
+      {
+        "from": [
+          "McPherson",
+          "Mcpherson"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "McPherson"
+      },
+      {
+        "from": [
+          "Los Angeles",
+          "LOS ANGELES"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Los Angeles"
+      },
+      {
+        "from": [
+          "Butler",
+          "BUTLER"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Butler"
+      },
+      {
+        "from": [
+          "Matanuska-Susitna",
+          "Matanuska-susitna"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Matanuska-Susitna"
+      },
+      {
+        "from": [
+          "Midland",
+          "midland"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Midland"
+      },
+      {
+        "from": [
+          "Alameda",
+          "ALAMEDA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Alameda"
+      },
+      {
+        "from": [
+          "Shasta",
+          "SHASTA"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Shasta"
+      },
+      {
+        "from": [
+          "St. Louis City",
+          "St. Louis city"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "St. Louis City"
+      },
+      {
+        "from": [
+          "McLeod",
+          "Mcleod"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "McLeod"
+      },
+      {
+        "from": [
+          "Newport",
+          "NEWPORT"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Newport"
+      },
+      {
+        "from": [
+          "Miami-Dade",
+          "Miami-dade"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Miami-Dade"
+      },
+      {
+        "from": [
+          "Fond du Lac",
+          "Fond Du Lac"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fond du Lac"
+      },
+      {
+        "from": [
+          "Jefferson",
+          "JEFFERSON"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Jefferson"
+      },
+      {
+        "from": [
+          "McClain",
+          "Mcclain"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "McClain"
+      },
+      {
+        "from": [
+          "Kern",
+          "KERN"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Kern"
+      },
+      {
+        "from": [
+          "Butte",
+          "BUTTE"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Butte"
+      },
+      {
+        "from": [
+          "Shelby",
+          "SHELBY"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Shelby"
+      },
+      {
+        "from": [
+          "Mchenry",
+          "McHenry"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mchenry"
+      },
+      {
+        "from": [
+          "McLean",
+          "Mclean"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "McLean"
+      },
+      {
+        "from": [
+          "Lac Qui Parle",
+          "Lac qui Parle"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lac Qui Parle"
+      },
+      {
+        "from": [
+          "San Luis Obispo",
+          "SAN LUIS OBISPO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "San Luis Obispo"
+      },
+      {
+        "from": [
+          "Inyo",
+          "INYO"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Inyo"
+      },
+      {
+        "from": [
+          "El Paso",
+          "EL Paso"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "El Paso"
+      },
+      {
+        "from": [
+          "Dupage",
+          "DuPage"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Dupage"
+      }
+    ],
+    "description": "Mass edit cells in column County"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "State",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column State using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "zip",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column zip using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Season1Date",
+    "expression": "value.replace(/\\s+/,' ')",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Season1Date using expression value.replace(/\\s+/,' ')"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Season1Time",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tue:12:00 PM - 6:00 PM;",
+          "Tue:12:00 pm - 6:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tue:12:00 PM - 6:00 PM;"
+      },
+      {
+        "from": [
+          "Wed:2:00 PM - 6:00 PM;",
+          "Wed:2:00 pm - 6:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:2:00 PM - 6:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:8:00 AM - 1:00 PM;",
+          "Sat:8:00 am - 1:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:8:00 AM - 1:00 PM;"
+      },
+      {
+        "from": [
+          "Mon:4:00 PM - 8:00 PM;",
+          "Mon:4:00 pm - 8:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mon:4:00 PM - 8:00 PM;"
+      },
+      {
+        "from": [
+          "Tue:11:00 AM - 5:00 PM;",
+          "Tue:11:00 am - 5:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tue:11:00 AM - 5:00 PM;"
+      },
+      {
+        "from": [
+          "Wed:4:00 PM - 7:00 PM;",
+          "Wed:4:00 pm - 7:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:4:00 PM - 7:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:8:30 AM - 1:00 PM;",
+          "Sat:8:30 am - 1:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:8:30 AM - 1:00 PM;"
+      },
+      {
+        "from": [
+          "Thu:3:00 PM - 8:00 PM;",
+          "Thu:3:00 pm - 8:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Thu:3:00 PM - 8:00 PM;"
+      },
+      {
+        "from": [
+          "sun:10:00 AM - 3:00 PM;",
+          "sun:10:00 am - 3:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "sun:10:00 AM - 3:00 PM;"
+      },
+      {
+        "from": [
+          "sun:9:00 AM - 1:00 PM;",
+          "sun:9:00 am - 1:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "sun:9:00 AM - 1:00 PM;"
+      },
+      {
+        "from": [
+          "Fri:9:00 AM - 2:00 PM;",
+          "Fri:9:00 am - 2:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fri:9:00 AM - 2:00 PM;"
+      },
+      {
+        "from": [
+          "Wed:7:30 AM - 1:30 PM;",
+          "Wed:7:30 am - 1:30 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:7:30 AM - 1:30 PM;"
+      },
+      {
+        "from": [
+          "Wed:8:00 AM - 12:00 PM;Sat:8:00 AM - 12:00 PM;",
+          "Wed:8:00 am - 12:00 pm;Sat:8:00 am - 12:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:8:00 AM - 12:00 PM;Sat:8:00 AM - 12:00 PM;"
+      },
+      {
+        "from": [
+          "Tue:4:00 PM - 6:00 PM;",
+          "Tue:4:00 pm - 6:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tue:4:00 PM - 6:00 PM;"
+      },
+      {
+        "from": [
+          "Fri:3:00 PM - 6:00 PM;",
+          "Fri:3:00 pm - 6:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fri:3:00 PM - 6:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:9:00 AM - 12:00 PM;",
+          "Sat:9:00 am - 12:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:9:00 AM - 12:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:10:00 AM - 4:00 PM;",
+          "Sat:10:00 am - 4:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:10:00 AM - 4:00 PM;"
+      },
+      {
+        "from": [
+          "Fri:12:00 PM - 6:00 PM;",
+          "Fri:12:00 pm - 6:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fri:12:00 PM - 6:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:9:00 AM - 3:00 PM;",
+          "Sat:9:00 am - 3:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:9:00 AM - 3:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:9:30 AM - 12:00 PM;",
+          "Sat:9:30 am - 12:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:9:30 AM - 12:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:9:00 AM - 2:00 PM;",
+          "Sat:9:00 am - 2:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:9:00 AM - 2:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:10:00 AM - 3:00 PM;",
+          "Sat:10:00 am - 3:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:10:00 AM - 3:00 PM;"
+      },
+      {
+        "from": [
+          "Thu:3:00 PM - 6:00 PM;",
+          "Thu:3:00 pm - 6:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Thu:3:00 PM - 6:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:8:30 am - 12:30 pm;",
+          "Sat:8:30 AM - 12:30 PM;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:8:30 am - 12:30 pm;"
+      },
+      {
+        "from": [
+          "Thu:4:00 PM - 7:00 PM;",
+          "Thu:4:00 pm - 7:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Thu:4:00 PM - 7:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:9:00 AM - 1:00 PM;",
+          "Sat:9:00 am - 1:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:9:00 AM - 1:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:8:00 AM - 5:00 PM;sun:8:00 AM - 5:00 PM;",
+          "Sat:8:00 am - 5:00 pm;sun:8:00 am - 5:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:8:00 AM - 5:00 PM;sun:8:00 AM - 5:00 PM;"
+      },
+      {
+        "from": [
+          "Wed:5:00 PM - 7:00 PM;",
+          "Wed:5:00 pm - 7:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:5:00 PM - 7:00 PM;"
+      },
+      {
+        "from": [
+          "Thu:4:00 PM - 8:00 PM;",
+          "Thu:4:00 pm - 8:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Thu:4:00 PM - 8:00 PM;"
+      },
+      {
+        "from": [
+          "Thu:11:00 AM - 2:00 PM;",
+          "Thu:11:00 am - 2:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Thu:11:00 AM - 2:00 PM;"
+      },
+      {
+        "from": [
+          "Wed:3:00 pm - 6:00 pm;",
+          "Wed:3:00 PM - 6:00 PM;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:3:00 pm - 6:00 pm;"
+      },
+      {
+        "from": [
+          "Fri:4:00 pm - 7:00 pm;",
+          "Fri:4:00 PM - 7:00 PM;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fri:4:00 pm - 7:00 pm;"
+      },
+      {
+        "from": [
+          "Tue:3:00 PM - 6:00 PM;",
+          "Tue:3:00 pm - 6:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tue:3:00 PM - 6:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:10:00 AM - 1:00 PM;",
+          "Sat:10:00 am - 1:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:10:00 AM - 1:00 PM;"
+      },
+      {
+        "from": [
+          "sun:10:00 AM - 2:00 PM;",
+          "sun:10:00 am - 2:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "sun:10:00 AM - 2:00 PM;"
+      },
+      {
+        "from": [
+          "Thu:5:00 PM - 7:00 PM;",
+          "Thu:5:00 pm - 7:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Thu:5:00 PM - 7:00 PM;"
+      },
+      {
+        "from": [
+          "Fri: 3:00 PM-6:00 PM;",
+          "Fri: 3:00 pm-6:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fri: 3:00 PM-6:00 PM;"
+      },
+      {
+        "from": [
+          "Fri:3:30 PM - 6:30 PM;",
+          "Fri:3:30 pm - 6:30 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fri:3:30 PM - 6:30 PM;"
+      },
+      {
+        "from": [
+          "Thu:4:30 pm - 6:30 pm;",
+          "Thu:4:30 PM - 6:30 PM;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Thu:4:30 pm - 6:30 pm;"
+      },
+      {
+        "from": [
+          "Sat:7:30 AM - 11:30 AM;",
+          "Sat:7:30 am - 11:30 am;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:7:30 AM - 11:30 AM;"
+      },
+      {
+        "from": [
+          "Wed:9:00 AM - 1:00 PM;",
+          "Wed:9:00 am - 1:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:9:00 AM - 1:00 PM;"
+      },
+      {
+        "from": [
+          "Fri:8:00 AM - 12:00 PM;",
+          "Fri:8:00 am - 12:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fri:8:00 AM - 12:00 PM;"
+      },
+      {
+        "from": [
+          "Thu:3:00 PM - 7:00 PM;",
+          "Thu:3:00 pm - 7:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Thu:3:00 PM - 7:00 PM;"
+      },
+      {
+        "from": [
+          "Fri:11:00 AM - 6:00 PM;",
+          "Fri:11:00 am - 6:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fri:11:00 AM - 6:00 PM;"
+      },
+      {
+        "from": [
+          "Wed:7:00 AM - 1:00 PM;Sat:7:00 AM - 1:00 PM;",
+          "Wed:7:00 am - 1:00 pm;Sat:7:00 am - 1:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:7:00 AM - 1:00 PM;Sat:7:00 AM - 1:00 PM;"
+      },
+      {
+        "from": [
+          "Wed:9:30 AM - 2:30 PM;",
+          "Wed:9:30 am - 2:30 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:9:30 AM - 2:30 PM;"
+      },
+      {
+        "from": [
+          "Wed: 8:00 AM-12:00 PM;Sat: 7:00 AM-12:00 PM;",
+          "Wed: 7:00 AM-12:00 PM;Sat: 8:00 AM-12:00 PM;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed: 8:00 AM-12:00 PM;Sat: 7:00 AM-12:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:8:00 AM - 11:00 AM;",
+          "Sat:8:00 am - 11:00 am;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:8:00 AM - 11:00 AM;"
+      },
+      {
+        "from": [
+          "Fri:8:00 AM - 2:00 PM;",
+          "Fri:8:00 am - 2:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fri:8:00 AM - 2:00 PM;"
+      },
+      {
+        "from": [
+          "Wed:11:00 AM - 6:00 PM;",
+          "Wed:11:00 am - 6:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:11:00 AM - 6:00 PM;"
+      },
+      {
+        "from": [
+          "Wed:12:00 pm - 5:00 pm;",
+          "Wed:12:00 PM - 5:00 PM;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:12:00 pm - 5:00 pm;"
+      },
+      {
+        "from": [
+          "Sat:7:00 AM - 12:00 PM;",
+          "Sat:7:00 am - 12:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:7:00 AM - 12:00 PM;"
+      },
+      {
+        "from": [
+          "Mon:3:00 PM - 6:00 PM;",
+          "Mon:3:00 pm - 6:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Mon:3:00 PM - 6:00 PM;"
+      },
+      {
+        "from": [
+          "sun:8:00 AM - 12:00 PM;",
+          "sun:8:00 am - 12:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "sun:8:00 AM - 12:00 PM;"
+      },
+      {
+        "from": [
+          "sun:9:00 AM - 2:00 PM;",
+          "sun:9:00 am - 2:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "sun:9:00 AM - 2:00 PM;"
+      },
+      {
+        "from": [
+          "Wed:3:00 PM - 7:00 PM;",
+          "Wed:3:00 pm - 7:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:3:00 PM - 7:00 PM;"
+      },
+      {
+        "from": [
+          "Fri:4:00 pm - 8:00 pm;",
+          "Fri:4:00 PM - 8:00 PM;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fri:4:00 pm - 8:00 pm;"
+      },
+      {
+        "from": [
+          "Thu:7:30 AM - 1:00 PM;",
+          "Thu:7:30 am - 1:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Thu:7:30 AM - 1:00 PM;"
+      },
+      {
+        "from": [
+          "Tue:3:00 PM - 7:00 PM;",
+          "Tue:3:00 pm - 7:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tue:3:00 PM - 7:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:7:00 AM - 11:00 AM;",
+          "Sat:7:00 am - 11:00 am;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:7:00 AM - 11:00 AM;"
+      },
+      {
+        "from": [
+          "Sat:8:00 AM - 4:00 PM;",
+          "Sat:8:00 am - 4:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:8:00 AM - 4:00 PM;"
+      },
+      {
+        "from": [
+          "Fri:2:00 PM - 6:00 PM;",
+          "Fri:2:00 pm - 6:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fri:2:00 PM - 6:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:9:00 AM - 1:30 PM;",
+          "Sat:9:00 am - 1:30 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:9:00 AM - 1:30 PM;"
+      },
+      {
+        "from": [
+          "Wed:8:00 AM - 4:00 PM;",
+          "Wed:8:00 am - 4:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:8:00 AM - 4:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:8:30 AM - 2:00 PM;",
+          "Sat:8:30 am - 2:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:8:30 AM - 2:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:8:30 am - 12:00 pm;",
+          "Sat:8:30 AM - 12:00 PM;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:8:30 am - 12:00 pm;"
+      },
+      {
+        "from": [
+          "Sat:8:00 AM - 2:00 PM;",
+          "Sat:8:00 am - 2:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:8:00 AM - 2:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:8:00 AM - 12:00 PM;",
+          "Sat:8:00 am - 12:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:8:00 AM - 12:00 PM;"
+      },
+      {
+        "from": [
+          "Fri:3:00 PM - 7:00 PM;",
+          "Fri:3:00 pm - 7:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fri:3:00 PM - 7:00 PM;"
+      },
+      {
+        "from": [
+          "Wed:8:00 AM - 2:00 PM;Sat:8:00 AM - 2:00 PM;",
+          "Wed:8:00 am - 2:00 pm;Sat:8:00 am - 2:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Wed:8:00 AM - 2:00 PM;Sat:8:00 AM - 2:00 PM;"
+      },
+      {
+        "from": [
+          "Thu:4:00 PM - 6:00 PM;",
+          "Thu:4:00 pm - 6:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Thu:4:00 PM - 6:00 PM;"
+      }
+    ],
+    "description": "Mass edit cells in column Season1Time"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Season2Time",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Sat:9:00 AM - 12:00 PM;",
+          "Sat:9:00 am - 12:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:9:00 AM - 12:00 PM;"
+      },
+      {
+        "from": [
+          "Sat:7:00 AM - 12:00 PM;",
+          "Sat:7:00 am - 12:00 pm;"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Sat:7:00 AM - 12:00 PM;"
+      }
+    ],
+    "description": "Mass edit cells in column Season2Time"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "x",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column x using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "y",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column y using expression value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "updateTime",
+    "expression": "value.toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column updateTime using expression value.toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "MarketName",
+    "expression": "grel:value.replace(\"&\", \"And\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column MarketName using expression grel:value.replace(\"&\", \"And\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "MarketName",
+          "expression": "grel:facetCount(value, \"value\", \"MarketName\")",
+          "columnName": "MarketName",
+          "from": 2,
+          "to": 35,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Facebook",
+    "expression": "grel:if(value.match(\"((http|https):\\/\\/)(www.)?[a-zA-Z0-9@:%._\\\\+~#?&//=]{2,256}\\\\.[a-z]{2,6}\\\\b([-a-zA-Z0-9@:%._\\\\+~#?&//=]*)\") != null, value, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facebook using expression grel:if(value.match(\"((http|https):\\/\\/)(www.)?[a-zA-Z0-9@:%._\\\\+~#?&//=]{2,256}\\\\.[a-z]{2,6}\\\\b([-a-zA-Z0-9@:%._\\\\+~#?&//=]*)\") != null, value, \"\")"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "range",
+          "name": "MarketName",
+          "expression": "grel:facetCount(value, \"value\", \"MarketName\")",
+          "columnName": "MarketName",
+          "from": 2,
+          "to": 35,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "Facebook",
+    "expression": "grel:if(value.match(\"((http|https):\\/\\/)(www.)?[a-zA-Z0-9@:%._\\\\+~#?&//=]{2,256}\\\\.[a-z]{2,6}\\\\b([-a-zA-Z0-9@:%._\\\\+~#?&//=]*)\") != null, value, \"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column Facebook using expression grel:if(value.match(\"((http|https):\\/\\/)(www.)?[a-zA-Z0-9@:%._\\\\+~#?&//=]{2,256}\\\\.[a-z]{2,6}\\\\b([-a-zA-Z0-9@:%._\\\\+~#?&//=]*)\") != null, value, \"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Facebook",
+    "expression": "grel:if(value.match(\"((http|https):\\/\\/)(www.)?[a-zA-Z0-9@:%._\\\\+~#?&//=]{2,256}\\\\.[a-z]{2,6}\\\\b([-a-zA-Z0-9@:%._\\\\+~#?&//=]*)\") != null, value, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Facebook_1",
+    "columnInsertIndex": 4,
+    "description": "Create column Facebook_1 at index 4 based on column Facebook using expression grel:if(value.match(\"((http|https):\\/\\/)(www.)?[a-zA-Z0-9@:%._\\\\+~#?&//=]{2,256}\\\\.[a-z]{2,6}\\\\b([-a-zA-Z0-9@:%._\\\\+~#?&//=]*)\") != null, value, \"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Website",
+    "expression": "grel:if(value.match(\"((http|https):\\/\\/)(www.)?[a-zA-Z0-9@:%._\\\\+~#?&//=]{2,256}\\\\.[a-z]{2,6}\\\\b([-a-zA-Z0-9@:%._\\\\+~#?&//=]*)\") != null, value, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Website_1",
+    "columnInsertIndex": 3,
+    "description": "Create column Website_1 at index 3 based on column Website using expression grel:if(value.match(\"((http|https):\\/\\/)(www.)?[a-zA-Z0-9@:%._\\\\+~#?&//=]{2,256}\\\\.[a-z]{2,6}\\\\b([-a-zA-Z0-9@:%._\\\\+~#?&//=]*)\") != null, value, \"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Twitter",
+    "expression": "grel:if(or(value.match(\"((http|https):\\/\\/)(www.)?[a-zA-Z0-9@:%._\\\\+~#?&//=]{2,256}\\\\.[a-z]{2,6}\\\\b([-a-zA-Z0-9@:%._\\\\+~#?&//=]*)\") != null,value.startsWith(\"@\")), value, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Twitter_1",
+    "columnInsertIndex": 7,
+    "description": "Create column Twitter_1 at index 7 based on column Twitter using expression grel:if(or(value.match(\"((http|https):\\/\\/)(www.)?[a-zA-Z0-9@:%._\\\\+~#?&//=]{2,256}\\\\.[a-z]{2,6}\\\\b([-a-zA-Z0-9@:%._\\\\+~#?&//=]*)\") != null,value.startsWith(\"@\")), value, \"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Youtube",
+    "expression": "grel:if(value.match(\"((http|https):\\/\\/)(www.)?[a-zA-Z0-9@:%._\\\\+~#?&//=]{2,256}\\\\.[a-z]{2,6}\\\\b([-a-zA-Z0-9@:%._\\\\+~#?&//=]*)\") != null, value, \"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "Youtube_1",
+    "columnInsertIndex": 9,
+    "description": "Create column Youtube_1 at index 9 based on column Youtube using expression grel:if(value.match(\"((http|https):\\/\\/)(www.)?[a-zA-Z0-9@:%._\\\\+~#?&//=]{2,256}\\\\.[a-z]{2,6}\\\\b([-a-zA-Z0-9@:%._\\\\+~#?&//=]*)\") != null, value, \"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "baseColumnName": "OtherMedia",
+    "expression": "grel:value.replace(\"Instagram @\",\"http://www.instagram.com/\")",
+    "onError": "set-to-blank",
+    "newColumnName": "OtherMedia_1",
+    "columnInsertIndex": 11,
+    "description": "Create column OtherMedia_1 at index 11 based on column OtherMedia using expression grel:value.replace(\"Instagram @\",\"http://www.instagram.com/\")"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Season1Date",
+    "guessCellType": true,
+    "removeOriginalColumn": false,
+    "mode": "separator",
+    "separator": "to",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Split column Season1Date by separator"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Season1Time",
+    "guessCellType": true,
+    "removeOriginalColumn": false,
+    "mode": "separator",
+    "separator": ";",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column Season1Time by separator"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Season1Time 8",
+    "description": "Remove column Season1Time 8"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Season2Date",
+    "guessCellType": true,
+    "removeOriginalColumn": false,
+    "mode": "separator",
+    "separator": "to",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Split column Season2Date by separator"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Season2Time",
+    "guessCellType": true,
+    "removeOriginalColumn": false,
+    "mode": "separator",
+    "separator": ";",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column Season2Time by separator"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Season2Time 8",
+    "description": "Remove column Season2Time 8"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Season3Date",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "to",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Split column Season3Date by separator"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Season3Time",
+    "guessCellType": true,
+    "removeOriginalColumn": false,
+    "mode": "separator",
+    "separator": ";",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column Season3Time by separator"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Season3Time 7",
+    "description": "Remove column Season3Time 7"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Season4Date",
+    "guessCellType": true,
+    "removeOriginalColumn": false,
+    "mode": "separator",
+    "separator": "to",
+    "regex": false,
+    "maxColumns": 2,
+    "description": "Split column Season4Date by separator"
+  },
+  {
+    "op": "core/column-split",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "Season4Time",
+    "guessCellType": true,
+    "removeOriginalColumn": false,
+    "mode": "separator",
+    "separator": ";",
+    "regex": false,
+    "maxColumns": 0,
+    "description": "Split column Season4Time by separator"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Season4Time 3",
+    "description": "Remove column Season4Time 3"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "x",
+    "newColumnName": "Longitude",
+    "description": "Rename column x to Longitude"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "y",
+    "newColumnName": "Latitude",
+    "description": "Rename column y to Latitude"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "updateTime",
+    "expression": "grel:value.replace(\"PM\",\"\").replace(\"AM\",\"\").toDate()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column updateTime using expression grel:value.replace(\"PM\",\"\").replace(\"AM\",\"\").toDate()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "zip",
+    "expression": "grel:\"00000\"[0,5-length(value)] + value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column zip using expression grel:\"00000\"[0,5-length(value)] + value"
+  }
+]

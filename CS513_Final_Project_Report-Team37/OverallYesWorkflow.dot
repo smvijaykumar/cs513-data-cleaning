@@ -1,0 +1,86 @@
+
+/* Start of top-level graph */
+digraph Workflow {
+rankdir=TB
+
+/* Title for graph */
+fontname=Helvetica; fontsize=18; labelloc=t
+label=CS513_Data_Cleaning_Project
+
+/* Start of double cluster for drawing box around nodes in workflow */
+subgraph cluster_workflow_box_outer { label=""; color=black; penwidth=2
+subgraph cluster_workflow_box_inner { label=""; penwidth=0
+
+/* Style for nodes representing atomic programs in workflow */
+node[shape=box style=filled fillcolor="#CCFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing atomic programs in workflow */
+ExporeDataset [shape=record rankdir=LR label="{<f0> ExporeDataset |<f1> Use Python to expore farmersmarkets dataset}"];
+ImputeMissingValues [shape=record rankdir=LR label="{<f0> ImputeMissingValues |<f1> Use Python to impute missing values for Zip and City}"];
+CleanWithOpenRefine [shape=record rankdir=LR label="{<f0> CleanWithOpenRefine |<f1> Use OpenRefine to clean farmersmarkets dataset}"];
+SqliteCreateTables [shape=record rankdir=LR label="{<f0> SqliteCreateTables |<f1> Use Python and sqlite to create tables}"];
+IntegrityCheckWithSQLite [shape=record rankdir=LR label="{<f0> IntegrityCheckWithSQLite |<f1> Use sqlite to check integrity}"];
+SplitCleanedDataset [shape=record rankdir=LR label="{<f0> SplitCleanedDataset |<f1> Split Cleaned Dataset into multiple}"];
+
+/* Style for nodes representing non-parameter data channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FFFFCC" peripheries=1 fontname=Helvetica]
+
+/* Nodes for non-parameter data channels in workflow */
+"farmersmarkets.csv" [shape=record rankdir=LR label="{<f0> farmersmarkets.csv |<f1> file\://data/farmersmarkets.csv}"];
+"farmersmarkets-imputed.csv" [shape=record rankdir=LR label="{<f0> farmersmarkets-imputed.csv |<f1> file\://data/farmersmarkets-imputed.csv}"];
+"farmersmarkets-openrefined.csv" [shape=record rankdir=LR label="{<f0> farmersmarkets-openrefined.csv |<f1> file\://data/farmersmarkets-openrefined.csv}"];
+"farmersmarkets-output.csv" [shape=record rankdir=LR label="{<f0> farmersmarkets-output.csv |<f1> file\://data/farmersmarkets-output.csv}"];
+"farmersmarkets_products.csv" [shape=record rankdir=LR label="{<f0> farmersmarkets_products.csv |<f1> file\://data/farmersmarkets_products.csv}"];
+"farmeresmarkets_payments.csv" [shape=record rankdir=LR label="{<f0> farmeresmarkets_payments.csv |<f1> file\://data/farmeresmarkets_payments.csv}"];
+"farmersMarket_location.csv" [shape=record rankdir=LR label="{<f0> farmersMarket_location.csv |<f1> file\://data/farmersMarket_location.csv}"];
+"farmersmarkets_output.csv" [shape=record rankdir=LR label="{<f0> farmersmarkets_output.csv |<f1> file\://data/farmersmarkets_output.csv}"];
+
+/* Style for nodes representing parameter channels in workflow */
+node[shape=box style="rounded,filled" fillcolor="#FCFCFC" peripheries=1 fontname=Helvetica]
+
+/* Nodes representing parameter channels in workflow */
+
+/* Edges representing connections between programs and channels */
+"farmersmarkets.csv" -> ExporeDataset
+ImputeMissingValues -> "farmersmarkets-imputed.csv"
+"farmersmarkets.csv" -> ImputeMissingValues
+CleanWithOpenRefine -> "farmersmarkets-openrefined.csv"
+"farmersmarkets-imputed.csv" -> CleanWithOpenRefine
+"farmersmarkets-openrefined.csv" -> SqliteCreateTables
+IntegrityCheckWithSQLite -> "farmersmarkets-output.csv"
+"farmersmarkets-openrefined.csv" -> IntegrityCheckWithSQLite
+SplitCleanedDataset -> "farmersmarkets_products.csv"
+SplitCleanedDataset -> "farmeresmarkets_payments.csv"
+SplitCleanedDataset -> "farmersMarket_location.csv"
+SplitCleanedDataset -> "farmersmarkets_output.csv"
+"farmersmarkets-output.csv" -> SplitCleanedDataset
+
+/* End of double cluster for drawing box around nodes in workflow */
+}}
+
+/* Style for nodes representing workflow input ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow input ports */
+"farmersmarkets.csv_input_port" [label=""]
+
+/* Style for nodes representing workflow output ports */
+node[shape=circle style="rounded,filled" fillcolor="#FFFFFF" peripheries=1 fontname=Helvetica width=0.2]
+
+/* Nodes representing workflow output ports */
+"farmersmarkets_products.csv_output_port" [label=""]
+"farmeresmarkets_payments.csv_output_port" [label=""]
+"farmersMarket_location.csv_output_port" [label=""]
+"farmersmarkets_output.csv_output_port" [label=""]
+
+/* Edges from input ports to channels */
+"farmersmarkets.csv_input_port" -> "farmersmarkets.csv"
+
+/* Edges from channels to output ports */
+"farmersmarkets_products.csv" -> "farmersmarkets_products.csv_output_port"
+"farmeresmarkets_payments.csv" -> "farmeresmarkets_payments.csv_output_port"
+"farmersMarket_location.csv" -> "farmersMarket_location.csv_output_port"
+"farmersmarkets_output.csv" -> "farmersmarkets_output.csv_output_port"
+
+/* End of top-level graph */
+}

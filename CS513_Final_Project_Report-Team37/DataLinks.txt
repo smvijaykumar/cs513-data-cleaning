@@ -1,0 +1,22 @@
+Box Folder Name: CS513-Final-Project-Team37 , Link: https://uofi.box.com/s/soccj3aed0jxfrxnk0wg09t6ggsprx1t
+
+Raw Dataset File:farmersmarkets.csv ,  https://uofi.box.com/s/9vjwgqrwvc8wc0fvljlm1dro2o64aqu4
+
+Imputed Dataset: farmersmarkets_imputed.csv,  https://uofi.box.com/s/en2p3297hl9ao3vi5l64cp35x9m95bhu
+
+OpenRefined Dataset: farmersmarkets_openrefined.csv, https://uofi.box.com/s/75yftc38dfh0aspjnwousufb8szu6ed8
+
+USPS Zip to City Mapping Datset: zip_code_database.csv  https://uofi.box.com/s/hj840b0389ykk7hdxl4p88tyldywjl6y
+
+Output Files:
+
+Final Output file: farmersmarkets_output.csv https://uofi.box.com/s/qcx2v7qbfx4j5w15xcnz1ugx8l1dbu0d
+
+Products Only Dataset file: farmersmarkets_products.csv   https://uofi.box.com/s/wepjiz1szq4vwp79q4uhhsr7v78zlklx
+
+Payments Only Dataset file: farmeresmarkets_payments.csv https://uofi.box.com/s/vldaw31lbzgshdtfvw6frv6nr1iuqu99
+
+Location only Dataset file: farmersMarket_location.csv  https://uofi.box.com/s/wa9po4i0bwsfs6o6e28rdkf730kw4aoj
+
+SQLite Database file: farmersmarkets.db  https://uofi.box.com/s/8ho5diquz3uy1oilnik3bmwxqur8tle9
+

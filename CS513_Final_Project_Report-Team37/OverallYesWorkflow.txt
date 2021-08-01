@@ -1,0 +1,42 @@
+'''
+@begin CS513_Data_Cleaning_Project @desc Overall Workflow for farmersmarkets dataset
+@in farmersmarkets.csv @uri file://data/farmersmarkets.csv
+   
+    @begin ExporeDataset @desc Use Python to expore farmersmarkets dataset
+    @in farmersmarkets.csv @uri file://data/farmersmarkets.cv
+    @end ExporeDataset
+    
+    @begin ImputeMissingValues @desc Use Python to impute missing values for Zip and City
+    @in farmersmarkets.csv @uri file://data/farmersmarkets.csv
+    @out farmersmarkets-imputed.csv @uri file://data/farmersmarkets-imputed.csv
+    @end ImputeMissingValues
+    
+    @begin CleanWithOpenRefine @desc Use OpenRefine to clean farmersmarkets dataset
+    @in farmersmarkets-imputed.csv @uri file://data/farmersmarkets-imputed.csv
+    @out farmersmarkets-openrefined.csv @uri file://data/farmersmarkets-openrefined.csv
+    @end CleanWithOpenRefine
+
+    @begin IntegrityCheckWithSQLiteOrDataLog @desc Use sqlite/datalog to check integrity
+    @in farmersmarkets-IM.csv @uri file://data/farmersmarkets-IM.csv
+    @out farmersmarkets-IC.csv @uri file://data/farmersmarkets-IC.csv
+    @end IntegrityCheckWithSQLiteOrDataLog
+    
+    @begin CleanWithSqlite @desc Use sqlite to clean IC Violations
+    @in farmersmarkets-IC.csv @uri file://data/farmersmarkets-IC.csv
+    @out farmersmarkets-sql.csv @uri file://data/farmersmarkets-sql.csv
+    @end CleanWithSqlite
+    
+    @begin SplitCleanedDataset @desc Split Cleaned Dataset into multiple
+    @in farmersmarkets-sql.csv @uri file://data/farmersmarkets-sql.csv
+    @out products.csv @uri file://data/products.csv
+    @out payments.csv @uri file://data/payments.csv
+    @out location.csv @uri file://data/location.csv
+    @out vendors.csv @uri file://data/vendors.csv
+    @end SplitCleanedDataset
+    
+@out products.csv @uri file://data/products.csv
+@out payments.csv @uri file://data/payments.csv
+@out location.csv @uri file://data/location.csv
+@out vendors.csv @uri file://data/vendors.csv
+@end CS513_Data_Cleaning_Project
+'''
